@@ -3,6 +3,7 @@ package com.weatherapp.myweatherapp.controller;
 import com.weatherapp.myweatherapp.model.CityInfo;
 import com.weatherapp.myweatherapp.service.WeatherService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,8 +23,16 @@ public class WeatherController {
     return ResponseEntity.ok(ci);
   }
 
-  // TODO: given two city names, compare the length of the daylight hours and return the city with the longest day
+  @GetMapping("/longestDaylight/{city1}/{city2}")
+  public ResponseEntity<String> longestDaylight(@PathVariable("city1") String city1,@PathVariable("city2") String city2) {
+    String result = weatherService.getLongestDaylight(city1,city2);
+    return new ResponseEntity<>(result, HttpStatus.OK);
+
+  }
+
+
 
   // TODO: given two city names, check which city its currently raining in
+
 
 }
