@@ -25,14 +25,15 @@ public class WeatherController {
 
   @GetMapping("/longestDaylight/{city1}/{city2}")
   public ResponseEntity<String> longestDaylight(@PathVariable("city1") String city1,@PathVariable("city2") String city2) {
-    String result = weatherService.getLongestDaylight(city1,city2);
+    String result = weatherService.getLongestDaylight(city1.toLowerCase(),city2.toLowerCase());
     return new ResponseEntity<>(result, HttpStatus.OK);
 
   }
 
-
-
-  // TODO: given two city names, check which city its currently raining in
-
+  @GetMapping("/currentlyRaining/{city1}/{city2}")
+  public ResponseEntity<String> currentlyRainingCity(@PathVariable("city1") String city1,@PathVariable("city2") String city2) {
+    String result = weatherService.getCurrentlyRainingCity(city1.toLowerCase(),city2.toLowerCase());
+    return new ResponseEntity<>(result, HttpStatus.OK);
+  }
 
 }
