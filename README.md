@@ -55,4 +55,4 @@ Given two cities, to check in which city it's currently raining, flow of executi
 * Using if else clause we check if the information form conditions contains the word mention "rain".
 * If the condition field mentions rain, we return the city name.
 
-Test cases for different scenarios were also written to verify functionality and to ensure the program behaves as expected under vairous conditions.
+Test cases for different scenarios were also written to verify functionality and to ensure the program behaves as expected under various conditions.

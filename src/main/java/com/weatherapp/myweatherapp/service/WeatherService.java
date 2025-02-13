@@ -57,7 +57,6 @@ public class WeatherService {
       System.out.println(e.getMessage());
     }
 
-    //return ResponseEntity.ok(ci);
     return "Failed to get the longest daylight city";
   }
 

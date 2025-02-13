@@ -96,7 +96,7 @@ class WeatherServiceTest {
         Assertions.assertEquals("None",weatherService.getCurrentlyRainingCity("london","dublin"));
         // Scenario 2 - when it's raining in one city
         Assertions.assertEquals("amsterdam",weatherService.getCurrentlyRainingCity("london","amsterdam"));
-        // Scenario 3 - when it's raining in  one  city
+        // Scenario 3 - when it's raining in one  city
         Assertions.assertEquals("amsterdam",weatherService.getCurrentlyRainingCity("amsterdam","london"));
         // Scenario 4 - when it's raining in  both the cities
         Assertions.assertEquals("amsterdam & delhi",weatherService.getCurrentlyRainingCity("amsterdam","delhi"));
