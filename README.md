@@ -38,3 +38,21 @@ You will need to implement these features by adding new endpoints to the `Weathe
 * Once you're ready to submit, raise a Pull Request to merge your changes with your main branch and share the repo with us.
 
 Good luck!
+
+## Documentation
+The aim was to add endpoints to get the city with longest daylight and given two cities, find the city where its currently raining.
+
+To get city with the longest daylight, flow of execution of the function getLongestDayLight is: 
+ * First we will get the city information which gives the weather conditions of that city.
+ * The information is in json format so we extract only the sunrise and sunset info.
+ * The sunset and sunrise info are in string format so we convert it into date time format.
+ * Next we convert the times to milli seconds and find the difference to get the daylight duration for the cities.
+ * Using the if else clause we compare the daylight duration and print the results.
+
+Given two cities, to check in which city it's currently raining, flow of execution of the function getCurrentlyRainingCity is:
+* First we will get the city information which includes the current condition of weather
+* We will get details from conditions field from current conditions in the json file.
+* Using if else clause we check if the information form conditions contains the word mention "rain".
+* If the condition field mentions rain, we return the city name.
+
+Test cases for different scenarios were also written to verify functionality and to ensure the program behaves as expected under various conditions.
