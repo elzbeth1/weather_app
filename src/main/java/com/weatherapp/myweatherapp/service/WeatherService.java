@@ -67,6 +67,7 @@ public class WeatherService {
       CityInfo ci1 = forecastByCity(city1);
       String rainConditionCity1 = getDataFromJson(ci1, "conditions");
       boolean isRainingCity1 = rainConditionCity1.toLowerCase().contains("rain");
+      //If both the cities are same
       if (city1.equals(city2)) {
 
         if (isRainingCity1) {
